@@ -1,5 +1,10 @@
 ﻿body {
     background-color: #D2B48C;
+    font-family:"Segoe Print";
+}
+
+h1 {
+    font-family: "Segoe Script";
 }
 
 li {
@@ -18,22 +23,27 @@ a:active {color:#696969; text-decoration:underline;}
     text-decoration: underline;
     }
 
-.cssgridview {width: 800px;; border: 5px solid white; text-align:center;}
+.cssgridview {margin-left:100px;border: 5px solid white; text-align:center;width:700px; font-family:"Berlin Sans FB";}
     .cssgridview td {padding: 10px; color: white; background: #F08080}
     .cssgridview th {padding: 4px 2px; background: #FFFF99; color: #696969; text-decoration:none;}
         .cssgridview th a {color: #696969; text-decoration:none;}
             .cssgridview th a:hover {color: #696969; text-decoration:underline;}
 
 .cssdetailsview {
+    font-family:"Berlin Sans FB";
+    margin-left:100px;
     border: 5px solid white;
     text-align: center;
-    width: 800px;
     background: white;
-    margin: 5px 0 10px 0;
-
+    width:700px;
 }
 
 .cssdetailsview .command {
+        background: #696969;
+        color: white;
+    }
+
+.cssdetailsview .command:hover {
         background: #696969;
         color: white;
     }
@@ -54,10 +64,31 @@ a:active {color:#696969; text-decoration:underline;}
 }
 
 #content {
-    margin-left: 250px;   
+    margin-left:400px;
+    margin-right:400px;
     text-align:center;
 }
 
 #footer {
     text-align:center;
 }
+
+#chicken {
+    width:100%;
+	-o-transition:1s;
+  	-ms-transition:1s;
+  	-moz-transition:1s;
+  	-webkit-transition:1s;
+  	transition:1s;
+  	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius:200px;
+}
+
+#chicken:hover {
+    width:100%;
+    border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
