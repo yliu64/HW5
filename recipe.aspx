@@ -45,6 +45,8 @@
         
         <div id="container">
             <div id="menu">
+                <h1>Wicked Easy Recipes</h1>
+                Using 5 Ingedients or Less!
                 <ul id="navlist">
                     <li><a href="default.aspx">Home</a></li>
                     <li><a href="recipe.aspx">All Recipes</a></li>
@@ -63,28 +65,20 @@
                     AllowSorting="True"  
                     PageSize="5"
                     Gridlines="none"
-                    CssClass="cssgridview"
-                    
-                    
-                    
-                    >
-
-
+                    CssClass="cssgridview">
                     <Columns>
                         <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
                         <asp:BoundField DataField="submittedBy" HeaderText="Submitted By" SortExpression="submittedBy" />
                         <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="recipedetails.aspx?Id={0}" Text="View Details" />
                     </Columns>
                 </asp:GridView>
-
-
-            <div />
+            </div>
             <br /><br />
-            <div id="footer">
+            
+                <div id="footer">
                 Copyright &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> Yang Liu - 6K183 : Software Design and Development
-            </div>  
-         </div>
-      </div>
+            </div> 
+        </div> 
     </div>
     </form>
 </body>

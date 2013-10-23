@@ -44,6 +44,8 @@
         </asp:SqlDataSource>
         <div id="container">
             <div id="menu">
+                <h1>Wicked Easy Recipes</h1>
+                Using 5 Ingedients or Less!
                 <ul id="navlist">
                     <li><a href="default.aspx">Home</a></li>
                     <li><a href="recipe.aspx">All Recipes</a></li>
@@ -53,7 +55,21 @@
                 </ul>
             </div>
             <div id="content">
-                <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Height="50px" Width="837px" DefaultMode="Insert">
+                <asp:DetailsView ID="DetailsView1" 
+                    runat="server" 
+                    AutoGenerateRows="False" 
+                    DataKeyNames="Id" 
+                    DataSourceID="SqlDataSource1" 
+                         HeaderText="Recipe Details"
+                    CssClass="cssdetailsview"
+                    HeaderStyle-CssClass="header"
+                    FieldHeaderStyle-CssClass="fieldheader"
+                    ItemStyle-CssClass="item"
+                    CommandRowStyle-CssClass="command"
+                    PagerStyle-CssClass="pager"                   
+                    DefaultMode="Insert"
+                    >
+
                     <Fields>
                         <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
                         <asp:BoundField DataField="submittedBy" HeaderText="Submitted By" SortExpression="submittedBy" />
