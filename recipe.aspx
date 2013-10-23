@@ -5,11 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
+    <div>   
         <asp:SqlDataSource ID="recipeDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:cs_Recipe %>" 
             SelectCommand="SELECT * FROM [Table]" 
             DeleteCommand="DELETE FROM [Table] WHERE [Id] = @Id" 
@@ -42,15 +42,49 @@
                 <asp:Parameter Name="Id" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="recipeDataSource" AllowPaging="True" AllowSorting="True" Width="1097px" PageSize="5">
-            <Columns>
-                <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
-                <asp:BoundField DataField="submittedBy" HeaderText="Submitted By" SortExpression="submittedBy" />
-                <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="recipedetails.aspx?Id={0}" Text="View Details" />
-            </Columns>
-        </asp:GridView>
-    
+        
+        <div id="container">
+            <div id="menu">
+                <ul id="navlist">
+                    <li><a href="default.aspx">Home</a></li>
+                    <li><a href="recipe.aspx">All Recipes</a></li>
+                    <li><a href="./newrecipe.aspx">New Recipe</a></li>
+                    <li><a href="./aboutus.aspx">About Us</a></li>
+                    <li><a href="./contact.aspx">Contact</a></li>
+                </ul>
+            </div>
+            <div id="content">
+                <asp:GridView ID="GridView1" 
+                    runat="server" 
+                    AutoGenerateColumns="False" 
+                    DataKeyNames="Id" 
+                    DataSourceID="recipeDataSource" 
+                    AllowPaging="True" 
+                    AllowSorting="True"  
+                    PageSize="5"
+                    Gridlines="none"
+                    CssClass="cssgridview"
+                    
+                    
+                    
+                    >
+
+
+                    <Columns>
+                        <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
+                        <asp:BoundField DataField="submittedBy" HeaderText="Submitted By" SortExpression="submittedBy" />
+                        <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="recipedetails.aspx?Id={0}" Text="View Details" />
+                    </Columns>
+                </asp:GridView>
+
+
+            <div />
+            <br /><br />
+            <div id="footer">
+                Copyright &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> Yang Liu - 6K183 : Software Design and Development
+            </div>  
+         </div>
+      </div>
     </div>
     </form>
 </body>

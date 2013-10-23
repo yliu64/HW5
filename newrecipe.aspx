@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -41,22 +42,37 @@
                 <asp:Parameter Name="Id" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Height="50px" Width="837px" DefaultMode="Insert">
-            <Fields>
-                <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
-                <asp:BoundField DataField="submittedBy" HeaderText="Submitted By" SortExpression="submittedBy" />
-                <asp:BoundField DataField="ing1" HeaderText="Ingredient #1" SortExpression="ing1" />
-                <asp:BoundField DataField="ing2" HeaderText="Ingredient #2" SortExpression="ing2" />
-                <asp:BoundField DataField="ing3" HeaderText="Ingredient #3" SortExpression="ing3" />
-                <asp:BoundField DataField="ing4" HeaderText="Ingredient #4" SortExpression="ing4" />
-                <asp:BoundField DataField="ing5" HeaderText="Ingredient #5" SortExpression="ing5" />
-                <asp:BoundField DataField="prepration" HeaderText="Prepration" SortExpression="prepration" />
-                <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
-            </Fields>
-        </asp:DetailsView>
-    
+        <div id="container">
+            <div id="menu">
+                <ul id="navlist">
+                    <li><a href="default.aspx">Home</a></li>
+                    <li><a href="recipe.aspx">All Recipes</a></li>
+                    <li><a href="./newrecipe.aspx">New Recipe</a></li>
+                    <li><a href="./aboutus.aspx">About Us</a></li>
+                    <li><a href="./contact.aspx">Contact</a></li>
+                </ul>
+            </div>
+            <div id="content">
+                <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Height="50px" Width="837px" DefaultMode="Insert">
+                    <Fields>
+                        <asp:BoundField DataField="name" HeaderText="Recipe Name" SortExpression="name" />
+                        <asp:BoundField DataField="submittedBy" HeaderText="Submitted By" SortExpression="submittedBy" />
+                        <asp:BoundField DataField="ing1" HeaderText="Ingredient #1" SortExpression="ing1" />
+                        <asp:BoundField DataField="ing2" HeaderText="Ingredient #2" SortExpression="ing2" />
+                        <asp:BoundField DataField="ing3" HeaderText="Ingredient #3" SortExpression="ing3" />
+                        <asp:BoundField DataField="ing4" HeaderText="Ingredient #4" SortExpression="ing4" />
+                        <asp:BoundField DataField="ing5" HeaderText="Ingredient #5" SortExpression="ing5" />
+                        <asp:BoundField DataField="prepration" HeaderText="Prepration" SortExpression="prepration" />
+                        <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
+                        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                    </Fields>
+                </asp:DetailsView>
+            </div>
+            <br /><br />
+            <div id="footer">
+                Copyright &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> Yang Liu - 6K183 : Software Design and Development
+            </div>  
+         </div>    
     </div>
     </form>
 </body>
