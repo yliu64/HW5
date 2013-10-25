@@ -32,7 +32,7 @@
                 <br />
                 <asp:Label ID="lbl_message" runat="server" Text="Your Message:"></asp:Label>
                 <br />
-                <asp:TextBox ID="tb_message" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tb_message" runat="server" Height="129px" TextMode="MultiLine" Width="266px"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Button ID="btn_sendmessage" runat="server" Text="Send Message" BackColor="LightCoral" BorderColor="White" BorderStyle="None" BorderWidth="10px" CssClass="header" Font-Names="Segoe Print" ForeColor="White" Height="62px" Width="159px" />

@@ -23,14 +23,14 @@ a:active {color:#696969; text-decoration:underline;}
     text-decoration: underline;
     }
 
-.cssgridview {margin-left:100px;border: 5px solid white; text-align:center;width:700px; font-family:"Berlin Sans FB";}
+.cssgridview {margin-left:100px;border: 5px solid white; text-align:center;width:700px; font-family:Calibri;}
     .cssgridview td {padding: 10px; color: white; background: #F08080}
     .cssgridview th {padding: 4px 2px; background: #FFFF99; color: #696969; text-decoration:none;}
         .cssgridview th a {color: #696969; text-decoration:none;}
             .cssgridview th a:hover {color: #696969; text-decoration:underline;}
 
 .cssdetailsview {
-    font-family:"Berlin Sans FB";
+    font-family:Calibri;
     margin-left:100px;
     border: 5px solid white;
     text-align: center;
@@ -48,20 +48,27 @@ a:active {color:#696969; text-decoration:underline;}
         color: white;
     }
 
-    .cssdetailsview .header td {
+.cssdetailsview .header td {
         padding: 4px 2px;
         background: #696969;
         color: white;
     }
 
+.cssdetailsview .fieldheader {
+    color: #696969;
+    }
+
+.cssdetailsview .item {
+    color: #D2B48C;
+    }
 
 #menu {
     text-align:center;
-}
+    }
 
 #navlist {
     text-align:center;
-}
+    }
 
 #content {
     margin-left:400px;
